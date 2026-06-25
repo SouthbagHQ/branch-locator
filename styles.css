@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Sans+MS:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+2:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+.btn-small {
+    font-size: 3px;
+    padding: 2px 8px;
+}
+
+.btn-large {
+    font-size: 24px;
+    padding: 15px 30px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family:
+        "Comic Sans MS", "Lobster 2", "Pacifico", "VT323", cursive !important;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        inset 0 0 5px rgba(255, 255, 255, 0.3) !important;
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.5),
+        2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+    filter: blur(0.3px) brightness(1.01) saturate(1.1);
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+}
+
+.site-logo {
+    height: 56px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+main {
+    width: min(820px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+h1,
+h2,
+p {
+    margin: 16px 0;
+}
+
+section {
+    margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        inset 0 0 5px rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.loading-indicator {
+    width: 70px;
+    height: 70px;
+    margin: 12px 0;
+    border: 14px solid;
+    border-radius: 50%;
+}
+
+#coords {
+    font-size: 12px;
+}
+
+#map {
+    width: 100%;
+    height: 430px;
+    margin-top: 16px;
+}
+
+.leaflet-container {
+    font:
+        16px "Comic Sans MS",
+        cursive !important;
+}
+
+footer {
+    margin-top: 28px;
+    padding: 16px;
+}
+
+footer p {
+    display: inline-block;
+    margin: 9px;
+}
+
+@media (min-width: 320px) {
+    * {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 480px) {
+    * {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    * {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    * {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    * {
+        padding: 25px;
+    }
+}
+
+@media (min-width: 1400px) {
+    * {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 720px) {
+    #map {
+        height: 340px;
+    }
+}
