@@ -151,6 +151,33 @@ function getDirections() {
   }, 1000);
 }
 
+// Match banking.southbag.cc: buttons with href navigate on click.
+document.querySelectorAll("button[href]").forEach((btn) => {
+  btn.setAttribute("type", "button");
+  btn.addEventListener("click", () => {
+    const target = btn.getAttribute("href");
+    if (target) {
+      window.location.href = target;
+    }
+  });
+});
+
+setTimeout(() => {
+  alert(
+    'Tip: You can also find us by searching "Southbag Bank" on any map app!',
+  );
+}, 5000);
+
+setInterval(() => {
+  if (Math.random() > 0.7) {
+    console.error("Map loading error: Invalid API key");
+  }
+}, 3000);
+
+window.showOnMap = showOnMap;
+window.searchBranches = searchBranches;
+window.getDirections = getDirections;
+
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     if (!document.hidden) {
