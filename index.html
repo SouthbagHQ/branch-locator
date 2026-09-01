@@ -67,6 +67,165 @@
                     Try Again
                 </button>
             </section>
+
+            <div style="margin: 30px 0;">
+                <h2>Branch Locations</h2>
+                <button
+                    type="button"
+                    class="btn-small"
+                    href="https://support.southbag.cc/ai"
+                >
+                    Can't find a branch?
+                </button>
+                <div
+                    style="
+                        border: 1px solid #ddd;
+                        padding: 15px;
+                        margin: 10px 0;
+                        background: white;
+                    "
+                >
+                    <h3>Online Banking</h3>
+                    <p><strong>Address:</strong>Everywhere</p>
+                    <p>
+                        <strong>Phone:</strong
+                        >http://customer-access.secure-auth.identity.bank-gateway.prod.apac.onlineservices.secureportal.onlinebanking.southbank.michealsoft.tech/
+                    </p>
+                    <p><strong>Hours:</strong>24/7</p>
+                    <button
+                        onclick="showOnMap('flagship')"
+                        class="btn-small"
+                    >
+                        Show on Map
+                    </button>
+                    <button
+                        type="button"
+                        class="btn-large"
+                        href="https://support.southbag.cc/ai"
+                    >
+                        Branch Hours Help
+                    </button>
+                </div>
+                <button
+                    type="button"
+                    class="btn-small"
+                    href="https://support.southbag.cc/ai"
+                >
+                    Is this real?
+                </button>
+                <div
+                    style="
+                        border: 1px solid #ddd;
+                        padding: 15px;
+                        margin: 10px 0;
+                        background: white;
+                    "
+                >
+                    <h3>In Person Branch</h3>
+                    <p><strong>Address:</strong>44 Main Street</p>
+                    <p><strong>Phone:</strong>112</p>
+                    <p><strong>Hours:</strong>Open</p>
+                    <button
+                        onclick="showOnMap('phishing')"
+                        class="btn-small"
+                    >
+                        Show on Map
+                    </button>
+                    <button
+                        type="button"
+                        class="btn-large"
+                        href="https://support.southbag.cc/ai"
+                    >
+                        Get Directions Help
+                    </button>
+                </div>
+            </div>
+
+            <div style="background: #f5f5f5; padding: 20px; margin: 20px 0;">
+                <h3>Find Branches Near You</h3>
+                <button
+                    type="button"
+                    class="btn-large"
+                    href="https://support.southbag.cc/ai"
+                >
+                    Search not working?
+                </button>
+                <form onsubmit="searchBranches(event)">
+                    <input
+                        type="text"
+                        placeholder="Enter your ZIP code"
+                        style="padding: 10px; width: 200px; margin-right: 10px;"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Radius (miles)"
+                        style="padding: 10px; width: 100px; margin-right: 10px;"
+                    />
+                    <button type="submit" class="btn-small">Search</button>
+                    <button
+                        type="button"
+                        class="btn-small"
+                        href="https://support.southbag.cc/ai"
+                    >
+                        Help with ZIP?
+                    </button>
+                </form>
+                <div
+                    id="searchResults"
+                    style="margin-top: 15px; color: red; font-weight: bold;"
+                ></div>
+            </div>
+
+            <button
+                type="button"
+                class="btn-large"
+                href="https://support.southbag.cc/ai"
+            >
+                Lost? Talk to us
+            </button>
+            <div style="margin: 30px 0;">
+                <h3>Get Directions</h3>
+                <p>
+                    Select a branch above and click "Get Directions" (feature)
+                </p>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <input
+                        type="text"
+                        placeholder="Your address"
+                        style="padding: 10px; flex: 1;"
+                        id="userAddress"
+                    />
+                    <button class="btn-small" onclick="getDirections()">
+                        Get Directions
+                    </button>
+                    <button
+                        type="button"
+                        class="btn-small"
+                        href="https://support.southbag.cc/ai"
+                    >
+                        Directions Help
+                    </button>
+                </div>
+                <div
+                    id="directions"
+                    style="
+                        margin-top: 15px;
+                        padding: 15px;
+                        background: #fff3cd;
+                        border: 1px solid #ffc107;
+                        display: none;
+                    "
+                >
+                    <p><strong>Directions:</strong></p>
+                    <ol>
+                        <li>Turn</li>
+                        <li>Go</li>
+                        <li>Turn at the thing</li>
+                        <li>You should be there</li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
         </main>
 
         <footer>

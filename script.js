@@ -112,6 +112,45 @@ function showError(message) {
 locateButton.addEventListener("click", locateBranch);
 retryButton.addEventListener("click", locateBranch);
 
+function showOnMap(branch) {
+  alert("Error: Unable to load map. Please refresh the page and try again.");
+}
+
+function searchBranches(event) {
+  event.preventDefault();
+  const resultsDiv = document.getElementById("searchResults");
+
+  const errors = [
+    "Branches not found",
+    "Connection timeout. Please try again later.",
+    "Invalid format",
+    "Found in your area",
+    "Service temporarily.",
+    "Please enter a valid.",
+    "Search exceeded. Try again in hours.",
+  ];
+
+  resultsDiv.textContent = errors[Math.floor(Math.random() * errors.length)];
+}
+
+function getDirections() {
+  const directionsDiv = document.getElementById("directions");
+  const userAddress = document.getElementById("userAddress").value;
+
+  if (!userAddress) {
+    alert("Please enter your address");
+    return;
+  }
+
+  directionsDiv.style.display = "block";
+
+  setTimeout(() => {
+    alert(
+      "Note: These directions may not be accurate. Please use the website for best results.",
+    );
+  }, 1000);
+}
+
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     if (!document.hidden) {
