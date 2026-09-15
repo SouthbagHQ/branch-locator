@@ -99,7 +99,7 @@ function showResult(latitude, longitude, accuracy) {
     marker = L.marker([latitude, longitude]).addTo(map);
   }
 
-  marker.bindPopup("<strong>Nearest SouthBag Branch</strong>").openPopup();
+  marker.bindPopup("<strong>Nearest Southbag Branch</strong>").openPopup();
 
   window.setTimeout(() => map.invalidateSize(), 50);
 }
